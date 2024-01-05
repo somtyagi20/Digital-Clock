@@ -47,6 +47,7 @@ img {
 }
 .time {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 300px;
@@ -92,4 +93,13 @@ img {
 
 .clock-container > h2 {
   margin: 0 0 0 0;
+}
+
+.time:hover {
+  transform: scale(0.9);
+}
+p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 120;
 }

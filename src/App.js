@@ -9,12 +9,19 @@ function App() {
   const [hour, setHour] = useState(time.getHours());
   const [minute, setMinute] = useState(time.getMinutes());
   const [second, setSecond] = useState(time.getSeconds());
-
+  const [wish, setWish] = useState("Good Morning");
   setInterval(() => {
     const time = new Date();
     setHour(time.getHours());
     setMinute(time.getMinutes());
     setSecond(time.getSeconds());
+    if (time.getHours() > 4 && time.getHours() < 12) {
+      setWish("Good Afternoon");
+    } else if (time.getHours() > 12 && time.getHours() < 19) {
+      setWish("Good Evening");
+    } else {
+      setWish("Good Night");
+    }
   }, 1000);
   return (
     <div className="App">
@@ -44,6 +51,7 @@ function App() {
               {hour}:{minute}:{second}
             </h1>
           </div>
+          <p>{wish}</p>
         </div>
       </div>
     </div>
