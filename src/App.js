@@ -15,9 +15,12 @@ function App() {
     setHour(time.getHours());
     setMinute(time.getMinutes());
     setSecond(time.getSeconds());
-    if (time.getHours() > 4 && time.getHours() < 12) {
+    let hour = time.getHours();
+    if (hour > 4 && hour < 12) {
+      setWish("Good Morning");
+    } else if (hour > 12 && hour < 17) {
       setWish("Good Afternoon");
-    } else if (time.getHours() > 12 && time.getHours() < 19) {
+    } else if (hour > 17 && hour < 19) {
       setWish("Good Evening");
     } else {
       setWish("Good Night");
