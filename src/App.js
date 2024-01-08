@@ -10,6 +10,8 @@ function App() {
   const [minute, setMinute] = useState(time.getMinutes());
   const [second, setSecond] = useState(time.getSeconds());
   const [wish, setWish] = useState("Good Morning");
+  const [text, setText] = useState("Show sidebar");
+
   setInterval(() => {
     const time = new Date();
     setHour(time.getHours());
@@ -45,7 +47,19 @@ function App() {
           <a href="rs">Alarm</a>
         </div>
       </div>
-
+      <button
+        onClick={() => {
+          const sidebar = document.querySelector(".sidebar");
+          sidebar.style.display === "none"
+            ? (sidebar.style.display = "inline-flex")
+            : (sidebar.style.display = "none");
+          sidebar.style.display === "none"
+            ? setText("Show sidebar")
+            : setText("Hide sidebar");
+        }}
+      >
+        {text}
+      </button>
       <div className="time-container">
         <div className="time">
           <div className="time-circle">
