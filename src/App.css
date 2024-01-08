@@ -65,7 +65,7 @@ img {
 }
 .time-container {
   display: flex;
-  height: 695px;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
