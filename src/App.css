@@ -1,14 +1,18 @@
 body {
   background-color: rgb(255, 255, 255);
 }
+.App {
+  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
 .sidebar {
   float: left;
   display: inline-flex;
   flex-direction: column;
   gap: 20px;
-  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  background: transparent;
   width: 10%;
   height: 695px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -64,7 +68,6 @@ img {
   height: 695px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
 }
 .time-circle {
   width: 200px;
