@@ -1,0 +1,17 @@
+.time-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+.time-button {
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+  background: rgba(15, 65, 0, 0.534);
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 120;
+  cursor: pointer;
+}

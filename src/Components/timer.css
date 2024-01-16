@@ -1,0 +1,66 @@
+.set-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.set-time-heading {
+  margin-bottom: 20px;
+}
+
+.set-time-heading h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.set-time-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.set-time-inputs input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.set-time-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.set-time-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.set-time-button:hover {
+  background-color: #0056b3;
+}
+
+.set-time-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff5a;
+  position: absolute;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+}
