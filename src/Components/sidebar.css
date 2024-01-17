@@ -1,6 +1,6 @@
 .sidebar {
   float: left;
-  display: none;
+  display: inline-flex;
   flex-direction: column;
   gap: 20px;
   background: transparent;

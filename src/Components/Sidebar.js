@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import "./sidebar.css";
 
 function Sidebar() {
-  const [text, setText] = useState("Show sidebar");
+  // const [text, setText] = useState("Show sidebar");
   return (
     <>
       <div className="sidebar">
@@ -31,7 +31,7 @@ function Sidebar() {
           <NavLink to="/alarm">Alarm</NavLink>
         </div>
       </div>
-      <button
+      {/* <button
         className="sidebar-btn"
         onClick={() => {
           const sidebar = document.querySelector(".sidebar");
@@ -44,7 +44,7 @@ function Sidebar() {
         }}
       >
         {text}
-      </button>
+      </button> */}
     </>
   );
 }

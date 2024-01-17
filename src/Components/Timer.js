@@ -1,5 +1,5 @@
 import "./timer.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 
 export default function Timer() {
   let [view, setView] = useState(false);
@@ -30,34 +30,42 @@ export default function Timer() {
       //   }
       //   return prevSecond - 1;
       // });
-      if (seconds === 0 && minutes === 0 && hour === 0) {
-        clearInterval(intervalId.current);
-        return;
-      } else {
-        //   setSeconds(seconds - 1);
-        //   if (seconds === 0) {
-        //     setMinutes(minutes - 1);
-        //     setSeconds(59);
-        //   }
-        //   if (minutes === 0) {
-        //     setHour(hour - 1);
-        //     setMinutes(59);
-        //     setSeconds(59);
-        //   }
-        setSeconds((prevSecond) => {
-          if (prevSecond === 0) {
-            setMinutes((prevMinute) => {
-              if (prevMinute === 0) {
-                setHour((prevHour) => prevHour - 1);
-                return 59;
+
+      //   setSeconds(seconds - 1);
+      //   if (seconds === 0) {
+      //     setMinutes(minutes - 1);
+      //     setSeconds(59);
+      //   }
+      //   if (minutes === 0) {
+      //     setHour(hour - 1);
+      //     setMinutes(59);
+      //     setSeconds(59);
+      //   }
+      setSeconds((prevSecond) => {
+        if (prevSecond === 0) {
+          setMinutes((prevMinute) => {
+            if (prevMinute === 0) {
+              setHour((prevHour) => {
+                if (prevHour === 0) {
+                  return 0;
+                }
+                return prevHour - 1;
+              });
+              if (hour === 0 && prevMinute === 0) {
+                return 0;
               }
-              return prevMinute - 1;
-            });
-            return 59;
+              return 59;
+            }
+            return prevMinute - 1;
+          });
+          if (minutes === 0 && hour === 0 && prevSecond === 0) {
+            clearInterval(intervalId.current);
+            return 0;
           }
-          return prevSecond - 1;
-        });
-      }
+          return 59;
+        }
+        return prevSecond - 1;
+      });
     }, 1000);
   }
 
